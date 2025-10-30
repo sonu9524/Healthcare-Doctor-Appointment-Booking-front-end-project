@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Healthcare Doctor Appointment Booking</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Healthcare Doctor Appointment Booking</h1>
+    <nav>
+      <a href="#doctor-list">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Our Service</h2>
+      <p>
+        Welcome to our Healthcare Appointment Booking System. We make it easy for patients to book
+        appointments with trusted doctors in just a few clicks. Choose a doctor, select your preferred
+        time slot, and complete your payment securely. No long queues, no waiting — fast and simple healthcare access!
+      </p>
+    </section>
+
+    <section id="doctor-list">
+      <h2>Available Doctors</h2>
+      <div class="doctors-container"></div>
+    </section>
+
+    <section id="appointment-form" class="hidden">
+      <h2>Book an Appointment</h2>
+      <form id="booking-form">
+        <div>
+          <label for="patient-name">Your Name</label>
+          <input type="text" id="patient-name" required />
+        </div>
+        <div>
+          <label for="patient-contact">Contact Number</label>
+          <input type="tel" id="patient-contact" required />
+        </div>
+        <div>
+          <label for="appointment-date">Select Date</label>
+          <input type="date" id="appointment-date" required />
+        </div>
+        <div>
+          <label for="appointment-time">Select Time Slot</label>
+          <select id="appointment-time" required>
+            <option value="">--Select--</option>
+          </select>
+        </div>
+        <button type="submit">Proceed to Payment</button>
+        <button type="button" id="cancel-booking">Cancel</button>
+      </form>
+    </section>
+
+    <section id="payment-section" class="hidden">
+      <h2>Payment Details</h2>
+      <form id="payment-form">
+        <div>
+          <label for="card-name">Cardholder Name</label>
+          <input type="text" id="card-name" required />
+        </div>
+        <div>
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" maxlength="16" required />
+        </div>
+        <div>
+          <label for="expiry">Expiry Date</label>
+          <input type="month" id="expiry" required />
+        </div>
+        <div>
+          <label for="cvv">CVV</label>
+          <input type="password" id="cvv" maxlength="3" required />
+        </div>
+        <button type="submit">Pay Now</button>
+        <button type="button" id="cancel-payment">Cancel</button>
+      </form>
+    </section>
+
+    <section id="confirmation" class="hidden">
+      <h2>Booking Confirmation</h2>
+      <p>
+        Thank you for booking your appointment. Your payment has been received successfully.
+      </p>
+      <button id="back-to-list">Back to Doctor List</button>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>If you have any queries, feel free to reach out.</p>
+      <form id="contact-form">
+        <div>
+          <label for="contact-name">Your Name</label>
+          <input type="text" id="contact-name" required />
+        </div>
+        <div>
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" required />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Healthcare Appointment System | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
